@@ -1,0 +1,18 @@
+{
+  "name": "Frappe HRMS Devcontainer",
+  "dockerComposeFile": [
+    "../backend/docker-compose.dev.yml"
+  ],
+  "service": "frappe",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "visualstudioexptteam.vscodeintellicode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "ln -sf ../../apps/hrms_saas /workspace/frappe-bench/apps/hrms_saas && echo 'Symlink created successfully!'"
+}
