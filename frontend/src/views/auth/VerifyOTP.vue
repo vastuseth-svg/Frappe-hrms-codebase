@@ -73,6 +73,7 @@ const handleBack = () => {
           <!-- Submit Button -->
           <div>
             <button
+              id="btn-verify-otp"
               type="submit"
               :disabled="authStore.loading.value || otpCode.length < 6"
               class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#4F46E5] focus:outline-none focus:ring-4 focus:ring-[#6366F1]/20 cursor-pointer shadow-btn-hover transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"

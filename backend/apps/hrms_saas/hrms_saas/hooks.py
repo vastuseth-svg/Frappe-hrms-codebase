@@ -34,7 +34,7 @@ fixtures = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/hrms_saas/css/hrms_saas.css"
+app_include_css = "/assets/hrms_saas/css/hrms_saas.css"
 # app_include_js = "/assets/hrms_saas/js/hrms_saas.js"
 
 # include js, css files in header of web template
@@ -178,6 +178,7 @@ fixtures = [
 
 # Testing
 # -------
+after_migrate = "hrms_saas.shreehrms.setup.seed_test_users"
 
 # before_tests = "hrms_saas.install.before_tests"
 

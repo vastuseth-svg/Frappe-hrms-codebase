@@ -8,7 +8,9 @@ const password = ref('')
 const authStore = useAuthStore()
 
 const handleLogin = async () => {
+  console.log('handleLogin called! username:', username.value, 'password:', password.value)
   if (!username.value || !password.value) {
+    console.log('handleLogin: missing credentials')
     return
   }
   await authStore.login(username.value, password.value)
@@ -82,6 +84,7 @@ const handleLogin = async () => {
           <!-- Submit Button -->
           <div>
             <button
+              id="btn-login"
               type="submit"
               :disabled="authStore.loading.value"
               class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg text-sm font-semibold text-white bg-[#6366F1] hover:bg-[#4F46E5] focus:outline-none focus:ring-4 focus:ring-[#6366F1]/20 cursor-pointer shadow-btn-hover transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"

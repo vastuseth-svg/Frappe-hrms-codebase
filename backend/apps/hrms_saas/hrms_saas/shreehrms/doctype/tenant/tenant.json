@@ -11,6 +11,10 @@
   "status",
   "suspension_reason",
   "admin_email",
+  "admin_mobile",
+  "plan",
+  "created_by_user",
+  "notes",
   "setup_complete"
  ],
  "fields": [
@@ -50,6 +54,27 @@
    "reqd": 1
   },
   {
+   "fieldname": "admin_mobile",
+   "fieldtype": "Data",
+   "label": "Admin Mobile"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Data",
+   "label": "Plan"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By User",
+   "options": "User"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
    "default": "0",
    "fieldname": "setup_complete",
    "fieldtype": "Check",
@@ -74,6 +99,19 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Super Admin",
    "share": 1,
    "write": 1
   }

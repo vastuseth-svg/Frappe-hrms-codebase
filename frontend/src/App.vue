@@ -3,6 +3,7 @@ import { ref, onMounted, watch } from 'vue'
 import { useAuthStore } from './stores/auth'
 import Login from './views/auth/Login.vue'
 import VerifyOTP from './views/auth/VerifyOTP.vue'
+import TenantList from './views/admin/TenantList.vue'
 
 const authStore = useAuthStore()
 
@@ -12,7 +13,7 @@ onMounted(() => {
   }
 })
 
-const activeTab = ref<'tenant-setup' | 'dashboard' | 'punch'>('tenant-setup')
+const activeTab = ref<'tenant-setup' | 'dashboard' | 'punch' | 'tenants'>('tenant-setup')
 
 watch(() => authStore.permittedModules.value, (newModules) => {
   if (newModules && newModules.length > 0) {
@@ -142,6 +143,16 @@ const handlePunch = () => {
           >
             Web Punch
           </button>
+          <button
+            v-if="authStore.permittedModules.value.includes('Super Admin Panel')"
+            @click="activeTab = 'tenants'"
+            :class="[
+              'px-3 py-1.5 text-[14px] font-medium transition-all rounded-[6px] cursor-pointer',
+              activeTab === 'tenants' ? 'bg-[#E8E8EC]/60 text-[#0A0A0A]' : 'text-[#6B6B6B] hover:text-[#0A0A0A]'
+            ]"
+          >
+            Tenants
+          </button>
         </nav>
 
         <!-- Right User Avatar & Logout -->
@@ -163,6 +174,11 @@ const handlePunch = () => {
     <!-- Main Content Area -->
     <main class="flex-grow max-w-[1280px] w-full mx-auto px-6 py-12">
       
+      <!-- 0. TENANT MANAGEMENT (Super Admin) -->
+      <section v-if="activeTab === 'tenants'" class="animate-fade-in">
+        <TenantList />
+      </section>
+
       <!-- 1. TENANT SETUP WIZARD -->
       <section v-if="activeTab === 'tenant-setup'" class="max-w-[540px] mx-auto space-y-8 animate-fade-in">
         

@@ -42,6 +42,7 @@ export function useAuthStore() {
 			if (data.message && data.message.status === 'success') {
 				state.tempUser = username
 				state.step = 'verify-otp'
+				console.log('AUTH STORE: step updated to', state.step)
 			} else {
 				// Handle standard Frappe exception response
 				const errorMsg = data._server_messages 

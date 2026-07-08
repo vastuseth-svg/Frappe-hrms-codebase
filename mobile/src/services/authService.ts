@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000';
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://172.24.38.229:8000';
 
 class StorageHelper {
 	private memoryStore: Record<string, string> = {};

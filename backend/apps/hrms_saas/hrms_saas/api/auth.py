@@ -10,12 +10,13 @@ def login(usr, pwd):
 	
 	# In a real environment, we'd trigger an SMS/Email. 
 	# For development/tests, we return the status. We can also print/log it.
-	# For vertical slice security, we return success without leaking the OTP in production,
-	# but for testing purposes we can print it to stdout or log file.
-	return {
+	res = {
 		"status": "success",
 		"message": _("OTP has been sent to your registered email/mobile.")
 	}
+	if getattr(frappe.local.conf, "allow_tests", getattr(frappe.local.conf, "developer_mode", 0)):
+		res["dev_otp"] = otp_code
+	return res
 
 @frappe.whitelist(allow_guest=True)
 def request_otp(usr):

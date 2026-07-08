@@ -21,7 +21,7 @@ According to the workspace rules defined in `.agents/AGENTS.md`, each step must 
     *   `backend/apps/hrms_saas/hrms_saas/shreehrms/doctype/otp_log/test_otp_log.py` (verifies fields, unique tokens)
 *   **Verification Command (Run by User):**
     ```bash
-    docker exec -it frappehrms-backend-1 bench --site frontend run-tests --app hrms_saas --doctype Tenant
+    docker exec -it backend-frappe-1 bash -c "cd /workspace/frappe-bench && bench --site frontend run-tests --app hrms_saas --doctype Tenant
     ```
 
 ---
@@ -35,7 +35,7 @@ According to the workspace rules defined in `.agents/AGENTS.md`, each step must 
     *   `backend/apps/hrms_saas/hrms_saas/shreehrms/tests/test_auth_service.py` (tests credential checks, OTP expiry, token expiration, active session rules)
 *   **Verification Command (Run by User):**
     ```bash
-    docker exec -it frappehrms-backend-1 bench --site frontend run-tests --app hrms_saas --module hrms_saas.shreehrms.tests.test_auth_service
+    docker exec -it backend-frappe-1 bash -c "cd /workspace/frappe-bench && bench --site frontend run-tests --app hrms_saas --module hrms_saas.shreehrms.tests.test_auth_service
     ```
 
 ---
@@ -49,7 +49,7 @@ According to the workspace rules defined in `.agents/AGENTS.md`, each step must 
     *   `backend/apps/hrms_saas/hrms_saas/tests/test_auth_api.py` (verifies status codes, JSON responses, error formats, validation exceptions)
 *   **Verification Command (Run by User):**
     ```bash
-    docker exec -it frappehrms-backend-1 bench --site frontend run-tests --app hrms_saas --module hrms_saas.tests.test_auth_api
+    docker exec -it backend-frappe-1 bash -c "cd /workspace/frappe-bench && bench --site frontend run-tests --app hrms_saas --module hrms_saas.tests.test_auth_api
     ```
 
 ---
