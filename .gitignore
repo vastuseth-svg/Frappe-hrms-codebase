@@ -1,0 +1,40 @@
+# Log files
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+yarn-error.log
+
+# Environment variables
+.env
+.env.*
+
+# AI Agent Configs
+.agents/
+.codex/
+
+# Frappe Bench environment & configs
+backend/frappe-bench/env/
+backend/frappe-bench/logs/
+backend/frappe-bench/config/
+backend/frappe-bench/sites/assets/
+backend/frappe-bench/sites/common_site_config.json
+backend/frappe-bench/sites/*/*_config.json
+backend/frappe-bench/sites/*/private/
+backend/frappe-bench/sites/*/public/files/
+backend/frappe-bench/sites/*/locks/
+backend/frappe-bench/sites/*/indexes/
+backend/frappe-bench/sites/*/touched_tables.json
+
+# Ignore third-party apps cloned inside the bench
+backend/frappe-bench/apps/frappe/
+backend/frappe-bench/apps/erpnext/
+backend/frappe-bench/apps/hrms/
+
+# Ignore symlinks or local dev configurations of the custom app in the bench
+backend/frappe-bench/apps/hrms_saas
