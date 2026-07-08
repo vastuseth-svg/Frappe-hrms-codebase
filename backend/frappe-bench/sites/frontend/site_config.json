@@ -1,0 +1,14 @@
+{
+ "allow_tests": true,
+ "db_name": "_4eca3faa7159c35b",
+ "db_password": "lcdx76i7kcjFOCVE",
+ "db_type": "mariadb",
+ "db_user": "_4eca3faa7159c35b",
+ "installed_apps": [
+  "frappe",
+  "erpnext",
+  "hrms",
+  "hrms_saas"
+ ],
+ "allow_cors": "*"
+}

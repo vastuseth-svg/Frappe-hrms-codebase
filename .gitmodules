@@ -1,0 +1,9 @@
+[submodule "backend/frappe-bench/apps/frappe"]
+	path = backend/frappe-bench/apps/frappe
+	url = https://github.com/frappe/frappe.git
+[submodule "backend/frappe-bench/apps/erpnext"]
+	path = backend/frappe-bench/apps/erpnext
+	url = https://github.com/frappe/erpnext.git
+[submodule "backend/frappe-bench/apps/hrms"]
+	path = backend/frappe-bench/apps/hrms
+	url = https://github.com/frappe/hrms.git

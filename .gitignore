@@ -32,9 +32,9 @@ backend/frappe-bench/sites/*/indexes/
 backend/frappe-bench/sites/*/touched_tables.json
 
 # Ignore third-party apps cloned inside the bench
-backend/frappe-bench/apps/frappe/
-backend/frappe-bench/apps/erpnext/
-backend/frappe-bench/apps/hrms/
+# backend/frappe-bench/apps/frappe/
+# backend/frappe-bench/apps/erpnext/
+# backend/frappe-bench/apps/hrms/
 
 # Ignore symlinks or local dev configurations of the custom app in the bench
 backend/frappe-bench/apps/hrms_saas
