@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:tenant_code",
+ "creation": "2026-07-08 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_name",
+  "tenant_code",
+  "status",
+  "suspension_reason",
+  "admin_email",
+  "setup_complete"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Pending Setup",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending Setup\nActive\nSuspended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "suspension_reason",
+   "fieldtype": "Small Text",
+   "label": "Suspension Reason"
+  },
+  {
+   "fieldname": "admin_email",
+   "fieldtype": "Data",
+   "label": "Admin Email",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "setup_complete",
+   "fieldtype": "Check",
+   "label": "Setup Complete"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-07-08 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "shreehrms",
+ "name": "Tenant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

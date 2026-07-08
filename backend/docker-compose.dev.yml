@@ -28,6 +28,8 @@ services:
       - SHELL=/bin/bash
     volumes:
       - .:/workspace
+      - ../frontend:/frontend
+      - ../mobile:/mobile
     working_dir: /workspace
     ports:
       - "8000:8000"

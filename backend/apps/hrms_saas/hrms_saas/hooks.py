@@ -5,6 +5,15 @@ app_description = "best"
 app_email = "mayurbodade00@gmail.com"
 app_license = "mit"
 
+fixtures = [
+	{
+		"doctype": "Custom Field",
+		"filters": [
+			["fieldname", "=", "tenant"]
+		]
+	}
+]
+
 # Apps
 # ------------------
 

@@ -1,0 +1,13 @@
+[
+ {
+  "name": "User-tenant",
+  "dt": "User",
+  "fieldname": "tenant",
+  "fieldtype": "Link",
+  "in_list_view": 1,
+  "label": "Tenant",
+  "options": "Tenant",
+  "insert_after": "email",
+  "doctype": "Custom Field"
+ }
+]
